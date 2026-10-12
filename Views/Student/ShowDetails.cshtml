@@ -1,0 +1,42 @@
+@model Day2_MVC_EFCore_Assignment.Models.Student
+
+@{
+	ViewData["Title"] = "Student Details";
+}
+
+<h1>Student Details</h1>
+
+<div class="card mt-3">
+	<div class="card-body">
+		<h4>Student Information</h4>
+
+		```
+		<hr />
+
+		<p>
+			<strong>ID:</strong>
+			@Model.Id
+		</p>
+
+		<p>
+			<strong>Name:</strong>
+			@Model.Name
+		</p>
+
+		<p>
+			<strong>Age:</strong>
+			@Model.Age
+		</p>
+
+		<p>
+			<strong>Department:</strong>
+			@(Model.Department?.Name ?? "No Department")
+		</p>
+
+		<a href="/Student/ShowAll" class="btn btn-primary">
+			Back to All Students
+		</a>
+	</div>
+	```
+
+</div>
